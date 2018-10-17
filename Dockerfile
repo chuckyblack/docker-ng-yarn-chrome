@@ -5,7 +5,7 @@ ENV CHROME_BIN=/usr/bin/google-chrome
 RUN apt update && \
     apt dist-upgrade --auto-remove -y && \
     DEBIAN_FRONTEND=noninteractive \
-    apt install -y tzdata docker xvfb gnupg unzip ca-certificates
+    apt install -y tzdata docker.io xvfb gnupg unzip ca-certificates
 
 ADD https://dl-ssl.google.com/linux/linux_signing_key.pub ./
 RUN apt-key add linux_signing_key.pub
